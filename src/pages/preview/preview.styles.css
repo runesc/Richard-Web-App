@@ -1,0 +1,82 @@
+.franja.d-flex{
+    background: gray;
+    padding: 1.25rem;
+    color: white;
+    line-height: 1.75rem;
+    align-items: center;
+    padding-left: 0;
+}
+
+.numero_pago{
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    min-width: 400px;
+    text-align: center;
+    font-weight: 600;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+input.form-control.hide__print__border.ms-auto.limited__width {
+    background: gray;
+    font-weight: bold;
+    min-width: 150px;
+    border: none;
+    text-align: center;
+    border-radius: 0;
+    height: 40px;
+    color: white;
+}
+.fecha h2{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.input.form-control.hide__print__border{
+    font-weight: 300;
+}
+p.client__name{
+    text-transform: uppercase;
+    font-weight: semi-bold;
+    font-size: 18px;
+}
+.degraded__band{
+    background: rgba(0,0,0, 0.3);
+    padding: 10px 20px;
+}
+.fecha_y_cantidad.d-flex.mt-3, .concept{
+    padding: 20px;
+    padding-top: 5px;
+}
+.bordered__container.mt-3{
+    border: 2px solid gray
+}
+.d-block.separator{
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+.sign{
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+}
+
+.sign hr{
+    margin-top: 5rem;
+    margin-bottom: .5rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}

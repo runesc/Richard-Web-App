@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  web-app:
+    # this service uses as image fastapi/uvicorn-gunicorn:python3.8
+    container_name: web-app
+    build: .
+    working_dir: /client
+    # install dependencies and run the app
+    command: "yarn vite"
+    volumes:
+      - .:/client
+    ports:
+      - "8081:8081"
+    restart: always
