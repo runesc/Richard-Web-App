@@ -3,8 +3,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-const ClientsLayout = ({action}) => {
-
+const ClientsLayout = ({ action }) => {
   const [client, setClient] = useState({
     codigoContrato: "",
     fechaRegistro: new Date(),
@@ -22,7 +21,6 @@ const ClientsLayout = ({action}) => {
       [e.target.name]: e.target.value,
     });
   };
-
 
   return (
     <>
@@ -48,11 +46,18 @@ const ClientsLayout = ({action}) => {
             <div className="col-sm-6">
               <div className="form-group">
                 <label htmlFor="fechaRegistro">Fecha de registro</label>
-                <DatePicker className="form-control" selected={client.fechaRegistro} onChange={
-                  (date) =>  setClient({
-                    ...client, fechaRegistro: new Date(date)
-                  })
-                } />
+                <DatePicker
+                  className="form-control"
+                  selected={client.fechaRegistro}
+                  onChange={(date) =>
+                    setClient({
+                      ...client,
+                      fechaRegistro: new Date(date),
+                    })
+                  }
+
+                  dateFormat="dd/MM/yyyy"
+                />
               </div>
             </div>
           </div>

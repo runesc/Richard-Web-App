@@ -70,6 +70,7 @@ const Preview = () => {
             className="form-control hide__print__border"
             selected={startDate}
             onChange={(date) => setStartDate(date)}
+            dateFormat="dd/MM/yyyy"
           />
         </div>
         <div className="cantidad ms-auto">
