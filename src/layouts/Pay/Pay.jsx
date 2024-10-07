@@ -113,8 +113,6 @@ const PayLayout = ({action}) => {
                     placeholder="Direccion"
                     name="direccion"
                     placeholder={payment.direccion}
-                    readOnly
-                    disabled
                   />
                 </div>
               </div>
