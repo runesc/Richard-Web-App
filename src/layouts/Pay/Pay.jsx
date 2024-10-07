@@ -15,7 +15,7 @@ const PayLayout = ({action}) => {
   const handleInputChange = (e) => {
     setPayment({
       ...payment,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.placeholder,
     });
   };
 
@@ -38,7 +38,7 @@ const PayLayout = ({action}) => {
                         id="codigoContrato"
                         placeholder="Código de contrato"
                         name="codigoContrato"
-                        value={payment.codigoContrato}
+                        placeholder={payment.codigoContrato}
                         onChange={handleInputChange}
                       />
                     </div>
@@ -52,7 +52,7 @@ const PayLayout = ({action}) => {
                         id="nombreCliente"
                         placeholder="Nombre del cliente"
                         name="name"
-                        value={payment.name}
+                        placeholder={payment.name}
                         onChange={handleInputChange}
                       />
                     </div>
@@ -66,7 +66,7 @@ const PayLayout = ({action}) => {
                         id="apellidoCliente"
                         placeholder="Apellido del cliente"
                         name="lastName"
-                        value={payment.lastName}
+                        placeholder={payment.lastName}
                         onChange={handleInputChange}
                       />
                     </div>
@@ -84,7 +84,7 @@ const PayLayout = ({action}) => {
                     id="manzana"
                     placeholder="Manzana"
                     name="manzana"
-                    value={payment.manzana}
+                    placeholder={payment.manzana}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -98,7 +98,7 @@ const PayLayout = ({action}) => {
                     id="lote"
                     placeholder="Lote"
                     name="lote"
-                    value={payment.lote}
+                    placeholder={payment.lote}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -112,7 +112,7 @@ const PayLayout = ({action}) => {
                     id="direccion"
                     placeholder="Direccion"
                     name="direccion"
-                    value={payment.direccion}
+                    placeholder={payment.direccion}
                     readOnly
                     disabled
                   />
