@@ -13,15 +13,22 @@ const PayLayout = ({action}) => {
   });
 
   const handleInputChange = (e) => {
+    //console.log(e.target.name, e.target.value);
     setPayment({
       ...payment,
-      [e.target.name]: e.target.placeholder,
+      [e.target.name]: e.target.value
     });
-  };
+  }
 
   return (
     <>
       <h1>Registrar nuevo pago</h1>
+
+      <p className="d-none">
+        {
+          JSON.stringify(payment)
+        }
+      </p>
 
       <div className="payment__form mt-4 w-100">
         <form onSubmit={(e) => action(e, payment)}>
@@ -36,7 +43,6 @@ const PayLayout = ({action}) => {
                         type="text"
                         className="form-control"
                         id="codigoContrato"
-                        placeholder="Código de contrato"
                         name="codigoContrato"
                         placeholder={payment.codigoContrato}
                         onChange={handleInputChange}
@@ -50,7 +56,6 @@ const PayLayout = ({action}) => {
                         type="text"
                         className="form-control"
                         id="nombreCliente"
-                        placeholder="Nombre del cliente"
                         name="name"
                         placeholder={payment.name}
                         onChange={handleInputChange}
@@ -64,7 +69,6 @@ const PayLayout = ({action}) => {
                         type="text"
                         className="form-control"
                         id="apellidoCliente"
-                        placeholder="Apellido del cliente"
                         name="lastName"
                         placeholder={payment.lastName}
                         onChange={handleInputChange}
@@ -82,7 +86,6 @@ const PayLayout = ({action}) => {
                     type="text"
                     className="form-control"
                     id="manzana"
-                    placeholder="Manzana"
                     name="manzana"
                     placeholder={payment.manzana}
                     onChange={handleInputChange}
@@ -96,7 +99,6 @@ const PayLayout = ({action}) => {
                     type="text"
                     className="form-control"
                     id="lote"
-                    placeholder="Lote"
                     name="lote"
                     placeholder={payment.lote}
                     onChange={handleInputChange}
@@ -110,9 +112,9 @@ const PayLayout = ({action}) => {
                     type="text"
                     className="form-control"
                     id="direccion"
-                    placeholder="Direccion"
                     name="direccion"
                     placeholder={payment.direccion}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>

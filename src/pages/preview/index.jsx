@@ -53,7 +53,9 @@ const Preview = () => {
   return (
     <div className="invoice p-5 w-100">
       <div className="franja d-flex">
-        <div className="numero_pago">No. {invoice}</div>
+        <div className="d-flex">
+        <div className="numero_pago d-flex align-items-center"><div>No. </div><input type="text" className="text-decoration-underline form-control hide__print__border w-50 m-0" placeholder={invoice} /></div>
+        </div>
         <div className="direccion_enrique_segoviano ms-auto text-end">
           <span className="d-block">Calle Hermanos Vázquez Gómez #251-C</span>
           <span className="d-block">Zona centro cp. 87000</span>
@@ -88,9 +90,11 @@ const Preview = () => {
 
       <div className="bordered__container mt-3">
         <p className="client__name p-3 pb-0">
-          <b>
-            {data.name} {data.lastName}
-          </b>
+          <input
+            type="text"
+            placeholder={`${data.name} ${data.lastName}`}
+            className="form-control hide__print__border w-50"
+          />
         </p>
 
         <div className="degraded__band">
@@ -110,17 +114,19 @@ const Preview = () => {
           </span>
         </div>
 
-        <div className="concept">
+        <div className="concept d-flex align-items-center gap-3">
           <b>Concepto:</b>{" "}
-          <span className="text-decoration-underline">
-            PAGO DE TERRENO(S) EJIDO BENITO JUÁREZ, MANZANA {data.manzana} LOTE{" "}
-            {data.lote}
-          </span>
-          <span className="d-block separator"></span>
+          <input className="text-decoration-underline form-control hide__print__border w-50"
+          placeholder={
+            //f-strings
+            `PAGO DE TERRENO(S) EJIDO BENITO JUÁREZ, MANZANA ${data.manzana} LOTE ${data.lote}`
+          }
+          />
+         
         </div>
         <div className="sign mb-3">
           <hr />
-          Julia García Cruz
+          <input type="text" className="text-decoration-underline form-control hide__print__border w-50 m-auto text-center" placeholder="Julia García Cruz" />
         </div>
       </div>
     </div>
