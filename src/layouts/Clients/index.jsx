@@ -147,8 +147,7 @@ const ClientsLayout = ({ action }) => {
                   id="address"
                   placeholder="Dirección"
                   name="address"
-                  value={client.address}
-                  disabled
+                  placeholder={client.address}
                 />
               </div>
             </div>
